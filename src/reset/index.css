@@ -1,0 +1,23 @@
+/**
+ * Reset
+ */
+
+@import "normalize.css/normalize.css";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+a {
+  color: inherit;
+}

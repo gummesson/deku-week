@@ -1,0 +1,30 @@
+/**
+ * Week
+ */
+
+.week {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.week__title {
+  font-size: 1.5rem;
+  font-weight: inherit;
+  color: var(--gray);
+}
+
+.week__number {
+  font-size: 4.5rem;
+}
+
+.week__meta {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.week__meta > a {
+  text-decoration: none;
+}

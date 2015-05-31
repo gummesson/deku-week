@@ -1,0 +1,33 @@
+{
+  "name": "deku-week",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "dependencies": {
+    "colors.css": "^2.3.0",
+    "deku": "^0.4.2",
+    "iso-week": "^0.1.2",
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "brick-router": "^2.1.1",
+    "brick-server": "^1.0.0",
+    "browserify": "^10.2.3",
+    "cpy": "^3.1.0",
+    "cssnext": "^1.5.2",
+    "garnish": "^2.1.3",
+    "html-minifier": "^0.7.2",
+    "minimist": "^1.1.1",
+    "rimraf": "^2.3.4",
+    "server-summary": "^2.0.2",
+    "surge": "^0.12.0",
+    "uglifyify": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node build.js --server | garnish -v",
+    "build": "rimraf www && node build.js --static && cpy src/CNAME www",
+    "deploy": "npm run build && npm run deploy:surge",
+    "deploy:surge": "surge -p www"
+  }
+}
