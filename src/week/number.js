@@ -9,14 +9,26 @@ import isoWeek from 'iso-week'
  * Component
  */
 
-function render() {
+function initialState() {
+  return {
+    week: '...'
+  }
+}
+
+function render({ state }) {
   return dom('p', { class: 'week__number' }, [
-    isoWeek()
+    state.week
   ])
+}
+
+function afterMount(c, e, setState) {
+  setState({
+    week: isoWeek()
+  })
 }
 
 /**
  * Exports
  */
 
-export default { render }
+export default { initialState, render, afterMount }
